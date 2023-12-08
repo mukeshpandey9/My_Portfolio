@@ -42,7 +42,7 @@ const AboutPage = () => {
           className="md:!text-8xl mb-10"
         />
         <div className="grid w-full place-items-center px-6 grid-cols-6 md:grid-cols-8 gap-16">
-          <div className="md:col-span-3 order-2 col-span-6 flex flex-col items-start justify-start">
+          <div className="md:col-span-3 order-2 md:order-1 col-span-6 flex flex-col items-start justify-start">
             <h2 className="mb-4 text-xl font-bold uppercase dark:text-light/75 text-dark/75">
               About Me
             </h2>
@@ -65,7 +65,7 @@ const AboutPage = () => {
               bring my skills and passion to your next project.
             </p>
           </div>
-          <div className="md:col-span-3 order-1  col-span-6 relative h-max rounded-2xl border-2 border-solid border-dark  dark:border-light bg-light dark:bg-dark p-8">
+          <div className="md:col-span-3 order-1 md:order-2  col-span-6 relative h-max rounded-2xl border-2 border-solid border-dark  dark:border-light bg-light dark:bg-dark p-8">
             <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-3xl bg-dark dark:bg-light" />
             <img src={profileImage} alt="Mukesh Pandey" />
           </div>

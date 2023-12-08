@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 import { GithubIcon } from "../components/Icons";
 import img1 from "../assets/images/projects/nft-collection-website-cover-image.jpg";
 import AnimatedText from "../components/AnimatedText";
+import LayoutComponent from "../components/LayoutComponent";
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="overflow-hidden md:h-[70vh] lg:h-[60vh] p-4 md:p-12 w-full flex flex-col md:flex-row gap-5 items-center justify-between rounded-3xl rounded-br-4xl border border-solid border-dark dark:bg-dark dark:text-light bg-light shadow-2xl dark:border-light  relative">
-      <div className="absolute top-0 -right-3  -z-10 w-[99%] h-[103%] rounded-br-3xl rounded-[2rem]  bg-dark dark:bg-light  " />
+    <article className="md:h-[70vh] lg:h-[60vh] p-6 md:p-12 h-full w-full flex flex-col md:flex-row gap-5 items-center justify-between rounded-3xl rounded-br-4xl border border-solid border-dark dark:bg-dark dark:text-light bg-light shadow-2xl dark:border-light  relative">
+      <div className="absolute top-1 -right-3 z-[-1]  w-[101%] h-[102%] rounded-[2rem] bg-dark dark:bg-light" />
       <Link
         to={link}
         target="_blank"
@@ -45,61 +46,39 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
 const ProjectPage = () => {
   return (
-    <div className="lg:px-32 md:px-16 px-0 dark:bg-dark bg-light">
+    <LayoutComponent className="lg:px-32 pb-16 pt-0 flex flex-col gap-20 md:px-16 px-7 ">
       <AnimatedText
         text="Imagination Trumps Knowledge!"
-        className="lg:!text-6xl -mt-10 md:mt-0"
+        className="lg:!text-6xl !text-5xl md:mt-10"
       />
-      <ReactFullpage
-        className="z-50 !p-0 "
-        licenseKey={"OPEN-SOURCE-GPLV3-LICENSE"} // Replace with your license key
-        scrollingSpeed={1000}
-        //   anchors={anchors}
-        navigation
-        //   navigationTooltips={anchors}
-        //   onLeave={(origin, destination, direction) => {
-        //     console.log("onLeave event", { origin, destination, direction });
-        //   }}
-        render={({ state, fullpageApi }) => {
-          return (
-            <ReactFullpage.Wrapper>
-              <div className="section    md:pt-0 min-h-screen">
-                <FeaturedProject
-                  title="EzBazaar - E-commerce website"
-                  link="https://ez-bazaar.vercel.app"
-                  github="https://github.com/mukeshpandey9/EzBazaar"
-                  summary="A full stack e-commerce website using react and tailwind for frontend and NodeJs for the backend"
-                  type="Featured Project"
-                  img={img1}
-                />
-              </div>
 
-              <div className="section min-h-screen">
-                <FeaturedProject
-                  title="EzBazaar - E-commerce website"
-                  link="https://ez-bazaar.vercel.app"
-                  github="https://github.com/mukeshpandey9/EzBazaar"
-                  summary="A full stack e-commerce website using react and tailwind for frontend and NodeJs for the backend"
-                  type="Featured Project"
-                  img={img1}
-                />
-              </div>
-
-              <div className="section  min-h-screen">
-                <FeaturedProject
-                  title="EzBazaar - E-commerce website"
-                  link="https://ez-bazaar.vercel.app"
-                  github="https://github.com/mukeshpandey9/EzBazaar"
-                  summary="A full stack e-commerce website using react and tailwind for frontend and NodeJs for the backend"
-                  type="Featured Project"
-                  img={img1}
-                />
-              </div>
-            </ReactFullpage.Wrapper>
-          );
-        }}
+      <FeaturedProject
+        title="EzBazaar - E-commerce website"
+        link="https://ez-bazaar.vercel.app"
+        github="https://github.com/mukeshpandey9/EzBazaar"
+        summary="A full stack e-commerce website using react and tailwind for frontend and NodeJs for the backend"
+        type="Featured Project"
+        img={img1}
       />
-    </div>
+
+      <FeaturedProject
+        title="EzBazaar - E-commerce website"
+        link="https://ez-bazaar.vercel.app"
+        github="https://github.com/mukeshpandey9/EzBazaar"
+        summary="A full stack e-commerce website using react and tailwind for frontend and NodeJs for the backend"
+        type="Featured Project"
+        img={img1}
+      />
+
+      <FeaturedProject
+        title="EzBazaar - E-commerce website"
+        link="https://ez-bazaar.vercel.app"
+        github="https://github.com/mukeshpandey9/EzBazaar"
+        summary="A full stack e-commerce website using react and tailwind for frontend and NodeJs for the backend"
+        type="Featured Project"
+        img={img1}
+      />
+    </LayoutComponent>
   );
 };
 

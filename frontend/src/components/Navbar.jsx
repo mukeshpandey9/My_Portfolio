@@ -20,7 +20,7 @@ const Navbar = () => {
         : "text-gray-500 dark:text-gray-400"
     } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-dark lg:p-0`;
 
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [mode, setmode] = useThemeSwitcher();
 
   return (
@@ -44,16 +44,32 @@ const Navbar = () => {
             >
               &times;
             </p>
-            <NavLink to="/" className={customClass}>
+            <NavLink
+              to="/"
+              onClick={() => setOpen(false)}
+              className={customClass}
+            >
               Home
             </NavLink>
-            <NavLink to="/about" className={customClass}>
+            <NavLink
+              to="/about"
+              onClick={() => setOpen(false)}
+              className={customClass}
+            >
               About
             </NavLink>
-            <NavLink to="/projects" className={customClass}>
+            <NavLink
+              to="/projects"
+              onClick={() => setOpen(false)}
+              className={customClass}
+            >
               Projects
             </NavLink>
-            <NavLink to="/contact" className={customClass}>
+            <NavLink
+              to="/contact"
+              onClick={() => setOpen(false)}
+              className={customClass}
+            >
               Contact
             </NavLink>
           </nav>
