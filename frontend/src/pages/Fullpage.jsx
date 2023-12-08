@@ -3,6 +3,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import { Link } from "react-router-dom";
 import { GithubIcon } from "../components/Icons";
 import img1 from "../assets/images/projects/nft-collection-website-cover-image.jpg";
+import LayoutComponent from "../components/LayoutComponent";
 import AnimatedText from "../components/AnimatedText";
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
@@ -43,15 +44,15 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   );
 };
 
-const ProjectPage = () => {
+const FullPage = () => {
   return (
     <div className="lg:px-32 md:px-16 px-0 dark:bg-dark bg-light">
       <AnimatedText
         text="Imagination Trumps Knowledge!"
-        className="lg:!text-6xl -mt-10 md:mt-0"
+        className="lg:!text-6xl"
       />
       <ReactFullpage
-        className="z-50 !p-0 "
+        className="z-50 "
         licenseKey={"OPEN-SOURCE-GPLV3-LICENSE"} // Replace with your license key
         scrollingSpeed={1000}
         //   anchors={anchors}
@@ -63,7 +64,7 @@ const ProjectPage = () => {
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>
-              <div className="section    md:pt-0 min-h-screen">
+              <div className="section   flex items-start pt-5 justify-center  min-h-screen">
                 <FeaturedProject
                   title="EzBazaar - E-commerce website"
                   link="https://ez-bazaar.vercel.app"
@@ -74,7 +75,7 @@ const ProjectPage = () => {
                 />
               </div>
 
-              <div className="section min-h-screen">
+              <div className="section     flex items-start pt-5 justify-center   min-h-screen">
                 <FeaturedProject
                   title="EzBazaar - E-commerce website"
                   link="https://ez-bazaar.vercel.app"
@@ -85,7 +86,7 @@ const ProjectPage = () => {
                 />
               </div>
 
-              <div className="section  min-h-screen">
+              <div className="section    flex items-start pt-5  justify-center  min-h-screen">
                 <FeaturedProject
                   title="EzBazaar - E-commerce website"
                   link="https://ez-bazaar.vercel.app"
@@ -103,4 +104,4 @@ const ProjectPage = () => {
   );
 };
 
-export default ProjectPage;
+export default FullPage;

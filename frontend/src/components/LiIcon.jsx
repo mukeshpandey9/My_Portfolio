@@ -20,7 +20,7 @@ const LiIcon = ({ reference }) => {
           cx="75"
           cy="50"
           r="20"
-          className=" stroke-[5px] fill-light dark:fill-dark "
+          className="stroke-[3px] md:stroke-[5px] fill-light dark:fill-dark "
         />
 
         <circle

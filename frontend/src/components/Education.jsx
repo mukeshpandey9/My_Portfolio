@@ -7,7 +7,7 @@ const Details = ({ type, time, place, info }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between"
+      className="my-8 first:mt-0 last:mb-0 w-[65%] md:w-[60%] mx-auto flex flex-col items-center justify-between"
     >
       <LiIcon reference={ref} />
       <motion.div
@@ -16,11 +16,11 @@ const Details = ({ type, time, place, info }) => {
         transition={{ duration: 0.5, type: "spring" }}
         className="flex flex-col gap-2"
       >
-        <h3 className="capitalize font-bold text-2xl">{type}</h3>
-        <span className="capitalize dark:text-light/75 text-dark/75 font-medium ">
+        <h3 className="capitalize font-bold text-lg md:text-2xl">{type}</h3>
+        <span className="capitalize text-sm md:text-xl dark:text-light/75 text-dark/75 font-medium ">
           {time} | {place}
         </span>
-        <p className="font-medium w-full">{info}</p>
+        <p className="font-medium w-full text-sm">{info}</p>
       </motion.div>
     </li>
   );
@@ -34,16 +34,18 @@ const Education = () => {
   });
 
   return (
-    <div className="my-64">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center">Education</h2>
+    <div className="section h-full my-36 md:my-64">
+      <h2 className="font-bold text-6xl md:text-8xl mb-20 md:mb-32 w-full text-center">
+        Education
+      </h2>
 
-      <div ref={ref} className="w-[75%] mx-auto relative">
+      <div ref={ref} className="w-full md:w-[75%] mx-auto relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-0 w-[4px] h-full bg-dark dark:bg-light origin-top"
+          className="absolute left-9 top-0 w-[2px] md:w-[4px] h-full bg-dark dark:bg-light origin-top"
         />
 
-        <ul className="w-full flex flex-col items-start justify-between ml-4">
+        <ul className="w-full flex flex-col items-start justify-between md:ml-4">
           <Details
             type="Bachelor Of Technology in Computer Science Engineering"
             time="2022-Present"

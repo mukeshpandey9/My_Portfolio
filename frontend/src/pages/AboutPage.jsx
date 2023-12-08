@@ -6,7 +6,7 @@ import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "../components/Skills";
 import Experience from "../components/Experience";
 import Education from "../components/Education";
-
+import ReactFullpage from "@fullpage/react-fullpage";
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
 
@@ -30,16 +30,19 @@ const AnimatedNumbers = ({ value }) => {
 
   return <span ref={ref}></span>;
 };
+
 const AboutPage = () => {
   return (
     <main className="flex w-full flex-col items-center text-dark dark:text-light justify-center">
-      <LayoutComponent className="py-16">
+      <LayoutComponent className="py-16 px-0 md:px-32">
+        {/* Main Starts here */}
+
         <AnimatedText
           text={"Passion Fuels Purpose!"}
-          className="text-7xl mb-10"
+          className="md:!text-8xl mb-10"
         />
-        <div className="grid w-full grid-cols-8 gap-16">
-          <div className="col-span-3 flex flex-col items-start justify-start">
+        <div className="grid w-full place-items-center px-6 grid-cols-6 md:grid-cols-8 gap-16">
+          <div className="md:col-span-3 order-2 col-span-6 flex flex-col items-start justify-start">
             <h2 className="mb-4 text-xl font-bold uppercase dark:text-light/75 text-dark/75">
               About Me
             </h2>
@@ -62,39 +65,39 @@ const AboutPage = () => {
               bring my skills and passion to your next project.
             </p>
           </div>
-          <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark  dark:border-light bg-light dark:bg-dark p-8">
+          <div className="md:col-span-3 order-1  col-span-6 relative h-max rounded-2xl border-2 border-solid border-dark  dark:border-light bg-light dark:bg-dark p-8">
             <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-3xl bg-dark dark:bg-light" />
             <img src={profileImage} alt="Mukesh Pandey" />
           </div>
-          <div className="col-span-2 flex flex-col items-end justify-between">
-            <div className="flex flex-col items-end justify-center ">
-              <span className="inline-block text-7xl font-bold">
+          <div className="md:col-span-2 order-3 col-span-6 flex md:flex-col items-center md:items-end justify-between">
+            <div className="flex flex-col items-center md:items-end justify-center ">
+              <span className="inline-block text-4xl md:text-7xl font-bold">
                 <AnimatedNumbers value={10} />+
               </span>
-              <h2 className="font-medium capitalize text-xl dark:text-light/75 text-dark/75">
+              <h2 className="font-medium capitalize text-sm md:text-xl dark:text-light/75 text-dark/75">
                 Satisfied Clients
               </h2>
             </div>
-            <div className="flex flex-col items-end justify-center ">
-              <span className="inline-block text-7xl font-bold">
+            <div className="flex flex-col items-center md:items-end justify-center ">
+              <span className="inline-block text-4xl md:text-7xl font-bold">
                 <AnimatedNumbers value={30} />+
               </span>
-              <h2 className="font-medium capitalize text-xl dark:text-light/75 text-dark/75">
+              <h2 className="font-medium capitalize text-sm md:text-xl dark:text-light/75 text-dark/75">
                 Projects Completed
               </h2>
             </div>
-            <div className="flex flex-col items-end justify-center ">
-              <span className="inline-block text-7xl font-bold">
+            <div className="flex flex-col items-center md:items-end justify-center ">
+              <span className="inline-block text-4xl md:text-7xl font-bold">
                 <AnimatedNumbers value={1} />+
               </span>
-              <h2 className="font-medium capitalize text-xl dark:text-light/75 text-dark/75">
+              <h2 className="font-medium capitalize text-sm md:text-xl dark:text-light/75 text-dark/75">
                 Years Of Experience
               </h2>
             </div>
           </div>
         </div>
         <Skills />
-        <Experience />
+        {/* <Experience /> */}
         <Education />
       </LayoutComponent>
     </main>

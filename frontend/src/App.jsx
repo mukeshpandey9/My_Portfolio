@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage";
 import Layout from "./Layout";
 import AboutPage from "./pages/AboutPage";
 import ProjectPage from "./pages/ProjectPage";
+import FullPage from "./pages/Fullpage";
 
 function App() {
   const router = createBrowserRouter(
@@ -17,6 +18,7 @@ function App() {
         <Route path="" element={<HomePage />} />
         <Route path="about" element={<AboutPage />} />
         <Route path="projects" element={<ProjectPage />} />
+        <Route path="full" element={<FullPage />} />
       </Route>
     )
   );
