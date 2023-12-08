@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 
-import emailjs from "@emailjs/browser";
 import LayoutComponent from "../components/LayoutComponent";
 import AnimatedText from "../components/AnimatedText";
 
@@ -12,22 +11,22 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_5262uye",
-        "template_teaecgh",
-        form.current,
-        "_tM_lvQB3YitWmy-3"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setDone(true);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    // emailjs
+    //   .sendForm(
+    //     "service_5262uye",
+    //     "template_teaecgh",
+    //     form.current,
+    //     "_tM_lvQB3YitWmy-3"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.text);
+    //       setDone(true);
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
   };
 
   return (
